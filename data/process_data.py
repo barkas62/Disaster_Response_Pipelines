@@ -52,8 +52,9 @@ def clean_data(df):
     :param df: DataFrame : Input DataFrame
     :return: cleaned dataframe
     '''
-    # drop rows with NaN values
-    df.dropna(inplace=True)
+    # drop rows with NaN values in 'message' and all categories columns
+    important_columns = ['message'] + df.columns[4:].tolist()
+    df.dropna(subset=important_columns, inplace=True)
 
     # Find duplicate rows (with same message values)
     duplicated = df.duplicated(subset='message')
