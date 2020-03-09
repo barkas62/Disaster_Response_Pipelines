@@ -77,7 +77,7 @@ def save_data(df, database_filename):
     :return: None
     '''
     engine = create_engine('sqlite:///'+database_filename)
-    df.to_sql('labeled_messages', engine, index=False, if_exists='replace')
+    df.to_sql('messages_categories', engine, index=False, if_exists='replace')
     engine.dispose()
 
 
