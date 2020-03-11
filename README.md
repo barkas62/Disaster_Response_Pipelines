@@ -13,11 +13,9 @@
 |- disaster_categories.csv  # data to process
 |- disaster_messages.csv    # data to process
 |- process_data.py          # script implementing ETL pipeline
-|- DisasterResponse.db      # database to save clean data to
 
 - models
 |- train_classifier.py      # script implementing ML pipeline
-|- disaster_model.pkl       # pickled classification model
 
 - dev
 |- ETL Pipeline Preparation.ipynb # etl exploration
